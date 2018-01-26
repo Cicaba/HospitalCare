@@ -9,16 +9,25 @@
         <div class="input_user password">
           <input type='text' placeholder="密码"><img src="../static/u1215.png"/>
         </div>
-        <div class="rember">
+        <div class="rember last">
           <input type="checkbox"> 记住密码
         </div>
-        <div class="rember">
-     <el-button type="primary" style="width:100%">登录</el-button>
+        <div class="rember ">
+          <el-button type="primary" style="width:100%" @click="login">登录</el-button>
         </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+  export default{
+    methods: {
+      login(){
+        this.$router.push("/PressureReport")
+      }
+    }
+  }
+</script>
 <style>
   #login .content, #login, #app, body, html {
     width: 100%;
@@ -31,10 +40,28 @@
     background: rgba(22, 155, 213, 1);
 
   }
-
+  body{
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 12px;
+    }
+    .login_header{
+      margin: 2rem auto !important;
+    }
+    .login_center{
+      width:90% !important;
+      height: 60% !important;
+    }
+  }
+  .rember.last{
+    margin-bottom: 0;
+  }
   #login .input_user ,.rember{
     position: relative;
-    width: 350px;
+    /*width: 350px;*/
+    width:80%;
     height: 35px;
     margin: auto;
     margin-bottom:20px;
@@ -49,8 +76,10 @@
   }
   #login .input_user input {
     position: relative;
-    width: 350px;
+    /*width: 350px;*/
     height: 35px;
+    width:100%;
+    margin: auto;
     border: none;
     padding-left: 45px;
     box-sizing:border-box;
@@ -68,8 +97,10 @@
   }
 
   .login_center {
-    width: 470px;
-    height: 400px;
+    /*width: 30rem;*/
+    width:35%;
+    height: 60%;
+    /*height: 25rem;*/
     position: absolute;
     left: 50%;
     top: 50%;

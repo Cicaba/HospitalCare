@@ -237,15 +237,6 @@
     }
 
   }
-
-  .img_father img ,.tree img{
-    margin-bottom: 10px;
-    width: 5em;
-    height: 2em;
-    vertical-align: middle;
-    /* 111111111 */
-  }
-
   .button_content.two .el-input__inner {
     width: 60%;
     margin: 0;
@@ -268,6 +259,7 @@
   }
 
   #haemorrhoids .el-radio-button__inner, #haemorrhoids .el-checkbox-button__inner {
+    /* ////////// */
     margin: 0 5px;
     border: 1px solid rgba(25, 158, 216, 1);
     border-radius: 5px;
@@ -342,32 +334,4 @@ display:none
     width: 100%;
     box-sizing: border-box;
   }
-
- .el-button.el-button--info.is-plain {
-    background: #fff;
-    color: rgba(25, 158, 216, 1);
-    border-color: rgba(25, 158, 216, 1);
-  }
-
-.el-button--info.is-plain:focus, .el-button--info.is-plain:hover {
-    /*background: rgba(25, 158, 216, 1);*/
-    color: #fff;
-    border-color: rgba(25, 158, 216, 1);
-    /* 111111111 */
-    
-  }
-
- .header_text {
-    /* 111111111 */
-    
-    box-sizing: border-box;
-    padding-left: 20px;
-    width: 100%;
-    font-size: 18px;
-    color: #fff;
-    line-height: 35px;
-    height: 38px;
-    background: rgba(25, 158, 216, 1);
-  }
-
 </style>

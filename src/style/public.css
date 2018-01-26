@@ -1,0 +1,31 @@
+.header_text {
+  box-sizing: border-box;
+  padding-left: 20px;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  line-height: 35px;
+  height: 38px;
+  background: rgba(25, 158, 216, 1);
+}
+p{
+  line-height: 1.5rem
+}
+.el-button--info.is-plain:focus, .el-button--info.is-plain:hover {
+  color: #fff;
+  border-color: rgba(25, 158, 216, 1);
+}
+.el-button.el-button--info.is-plain {
+  background: #fff;
+  color: rgba(25, 158, 216, 1);
+  border-color: rgba(25, 158, 216, 1);
+}
+.img_father img ,.tree img{
+  margin-bottom: 10px;
+  width: 5em;
+  height: 2em;
+  vertical-align: middle;
+}
+.el-input__inner{
+  height: 30px;
+}

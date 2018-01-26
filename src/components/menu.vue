@@ -41,10 +41,10 @@ export default {
       report:false,//报告
       reportList: [
         {name:"压疮报告",path:"/PressureReport"},
-        {name:"入院评估",path:""},
-        {name:"Morse跌倒坠床评估",path:""},
-        {name:"导管风险评估及干预",path:""},
-        {name:"Barthel指数评定",path:""},
+        {name:"入院评估",path:"/toHospital"},
+        {name:"Morse跌倒坠床评估",path:"/Fall"},
+        {name:"导管风险评估及干预",path:"/RiskCatheter"},
+        {name:"Barthel指数评定",path:"/Barthel"},
         {name:"疼痛评估记录表",path:"/painAssessment"}
       ]
     }
