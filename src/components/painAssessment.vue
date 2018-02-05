@@ -85,6 +85,7 @@ import '../style/ystep.css';
 export default {
   data(){
     return {
+      degree:1,//疼痛程度
       time:null,
       radio1:null,
       show:false,
@@ -109,6 +110,7 @@ export default {
               obj1[attr] =  obj2[attr];
           }
       }
+      let _this = this;
       function SetStep(arg){
           this.body=document.body;
           this.opt = {
@@ -127,7 +129,6 @@ export default {
               showBtn:false,//是否生成上一步下一步操作按钮
               clickAble:true,//是否可以通过点击进度条的节点操作进度
               onLoad: function(){
-
               }
           }
           if(document.body.clientWidth<document.body.clientHeight){
@@ -172,7 +173,7 @@ export default {
           
           stepContainer.css('left',(w_con-stepP.width()-this.opt.imgWidth-10-this.opt.stepContainerMar*2)/2)
           this.content.css('overflow','hidden')
-          this.setProgress(this.stepContainer,this.opt.curStep,this.opt.stepCounts)
+          this.setProgress(this.stepContainer,_this.degree,this.opt.stepCounts)
           //判断参数 是否显示按钮 并绑定点击事件
           if(this.opt.showBtn){
               this.content.append(stepButtonHtml)
@@ -201,8 +202,9 @@ export default {
           }
           //判断时候可点击进度条 并绑定点击事件
           if(this.opt.clickAble){
-              stepsHtml.find('li').on('click',function(){
+              stepsHtml.find('li').on('click',function(e){
                   _that.opt.curStep=$(this).index()+1;
+                  _this.degree =  _that.opt.curStep;
                   _that.setProgress(_that.stepContainer,_that.opt.curStep,_that.opt.stepCounts)
               })
           }
